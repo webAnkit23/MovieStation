@@ -26,7 +26,6 @@ export default function Hero() {
   if(query.length==0)return;
   console.log('s');
   navigate(`/search/${query}`)
-   
  }
   return (
   ( <div className="heroContainer">  

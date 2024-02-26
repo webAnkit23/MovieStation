@@ -10,6 +10,9 @@
     justify-content: center;
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
+.heroContainer{
+    min-height: 200px;
+}
 .heroSearch{
     padding: 10px;
     gap: 10px;

@@ -38,6 +38,7 @@ export default function App() {
   return (
     <BrowserRouter>
     <Navbar />
+    <div style={{minHeight:'100vh'}}>
     <Suspense fallback ={<DisplayLoading />}>
     <Routes>
       <Route path='/' element ={<LandingPage />}/>
@@ -49,7 +50,7 @@ export default function App() {
       
     </Routes>
     </Suspense>
-   
+    </div>
     <Footer />
 
    

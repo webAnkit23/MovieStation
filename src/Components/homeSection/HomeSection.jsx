@@ -7,6 +7,5 @@ export default function HomeSection() {
       <Hero />
        <MainContent />
     </>
-  
   )
 }
