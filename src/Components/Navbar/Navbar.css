@@ -1,0 +1,110 @@
+.nav_container{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 100;
+    user-select: none;
+    background: rgb(255 0 0 / 10%);
+}
+
+
+.nav_icon{
+    font-size: 40px;
+    font-family: cursive;
+    background: -webkit-linear-gradient(#e48d8d, #ff5229);;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+
+}
+.nav_opener{
+    position: absolute;
+    color: red;
+    right: 20px;
+    display: none;
+    z-index: 200;
+}
+.nav_container>ul{
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_container>ul>li{
+    color: white;
+    font-family: math;
+    /* font-weight: 700; */
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 1s steps(1000);
+}
+.link{
+    color: white;
+    font-family: math;
+    /* font-weight: 700; */
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.nav_container>button{
+    background: -webkit-linear-gradient(#e48d8d, #ff5229);;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    border: none;
+    font-size: 30px;
+    font-weight: 600;
+}
+.nav_container>ul>li:hover{
+    background: -webkit-linear-gradient(#5e9690, #54f3ed);;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@media only screen and (max-width:500px){
+    .nav_container>button{
+        display: none;
+    }
+}
+@media only screen and (max-width:570px){
+    .nav_opener{
+        right: 20px;
+        top: 20px;
+    }
+    .hide{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+    .nav_container{
+        background: #251d1d;
+       flex-direction: column;
+       overflow: hidden;
+       text-align: center;
+    }
+    .nav_icon{
+        margin-top: 20px;
+    }
+    .nav_container>ul{
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .nav_container>button{
+        display: none;
+    }
+    .goUp{
+        transform: translateY(0px);
+        transition-duration: .4s;
+    }
+    .goDown{
+        transform: translateY(-300px);
+        transition-duration: .4s;
+    }
+     
+}

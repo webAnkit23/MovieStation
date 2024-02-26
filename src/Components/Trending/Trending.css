@@ -1,0 +1,20 @@
+.heading{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    color: white;
+    font-family: sans-serif;
+}
+.heading>h1{
+    font-weight: 100;
+}
+.trndingContainer{
+    min-height: 700px;
+}
+@media only screen and (max-width:400px){
+    .heading{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    }
+}

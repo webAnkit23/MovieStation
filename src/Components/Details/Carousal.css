@@ -1,0 +1,72 @@
+.carousalBox{
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.carousal{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.profileBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carousalContainer{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 20px;
+}
+
+.profileBox>div{
+    width: 90px;
+    height: 90px;
+    background-size: contain;
+    background-position: center;
+    border-radius: 50%;
+    
+    
+}
+.profileBox>h3{
+    color: #2cd8be;
+    font-family: math;
+    font-weight: 300;
+    text-wrap: nowrap;
+    font-size: medium;
+}
+.profileBox>p{
+    color: #e02f17;
+    font-family: monospace;
+    font-weight: 100;
+    text-wrap: nowrap;
+}
+.arrow{
+    position: absolute;
+    margin-bottom: 30px;
+  border-radius: 50%;
+    border: none;
+    color: #f7baba;
+    background-clip: padding-box;
+    border: none;
+}
+.leftArrow{
+    left: 10px;
+}
+.rightArrow{
+    right: 10px;
+}
+.arrow:hover{
+    
+   color: rgb(192, 49, 49);
+}
+.cast{
+    font-weight: 400;
+    font-family: system-ui;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: lightskyblue;
+    font-size: x-large;
+    padding-left: 10px;
+}
