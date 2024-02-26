@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { ImLinkedin } from "react-icons/im";
@@ -13,8 +13,15 @@ import narcos from './narcos.jpeg';
 import TopGun from './TopGun.jpeg'
 import './Footer.css'
 export default function Footer() {
+  const ref = useRef();
+  useEffect(() =>{
+  ref.current.style.display = 'none';
+  setTimeout(() =>{
+    ref.current.style.display = 'block';
+  },2000);
+  },[]);
   return (
-    <div className="footerContainer">
+    <div className="footerContainer" ref={ref}>
         
             <div className="footerHeading">
                  <h1>Welcome to Platform <span>3/9</span></h1>
