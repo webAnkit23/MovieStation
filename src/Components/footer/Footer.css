@@ -8,16 +8,14 @@ padding: 20px;
     display: flex;
     align-items: center;
     color: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  
     gap: 10px;
     text-align: center;
 }
 .about_author>h1{
-    margin-bottom: 20px;
-   text-align: center;
+   margin: 5px;
+      text-align: center;
    text-wrap: wrap;
-   margin-bottom: 20px;
    font-family:system-ui;
    font-weight: 400;
    color: white;
@@ -89,3 +87,19 @@ padding: 20px;
 .phone{
     font-size: 10px;
 }
+@media only screen and (max-width:850px){ 
+    .about_author>h1{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:740px){
+ .about_author>h1{
+    display: none;
+ }
+ .movieBox{
+    display: none;
+ }
+ .footerHeading{
+    text-align: center;
+ }
+ }

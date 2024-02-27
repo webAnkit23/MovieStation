@@ -22,9 +22,12 @@ export default function Details() {
   },[credits])
   return (
          (<>
+             <div style={{minHeight:'500px'}}>
             <DetailBanner data ={data} videos ={videos} director ={director}/>
+           
             <Carousal members = {credits?.cast} heading ='Cast' loading ={creditsLoading}/>
             <Carousal members = {credits?.crew} heading ='Crew' loading ={creditsLoading}/>
+            </div>
             <Similar media ={media} mediaId ={id} />
          </>)
         

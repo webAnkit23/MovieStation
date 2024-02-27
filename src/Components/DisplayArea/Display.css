@@ -1,9 +1,8 @@
 .display_container{
-    display: flex;
     align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
     margin-top: 30px;
     justify-content: space-evenly;
     min-height: 700px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    display: grid;
 }

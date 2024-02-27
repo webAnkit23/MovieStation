@@ -28,7 +28,7 @@ export default function Hero() {
   navigate(`/search/${query}`)
  }
   return (
-  ( <div className="heroContainer">  
+  ( <div className="heroContainer" >  
        <div className="heroBackground" style={{backgroundImage : `url(${image||Chennai})`}}> 
          <div className="heroSearch">
             <h1>Find Movies TV Shows and more</h1>

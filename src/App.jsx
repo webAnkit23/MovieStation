@@ -5,7 +5,7 @@ import { BrowserRouter,Route ,Routes} from 'react-router-dom';
 import { useDispatch  } from 'react-redux';
 import { getApiConfiguration, getGenre } from './Store/homeSlice';
 import fetchData from './Api/Api.js'
-import DisplayLoading from './Components/DisplayArea/DisplayLoading.jsx';
+import './App.css'
 import Footer from './Components/footer/Footer.jsx';
 import Navbar from './Components/Navbar/Navbar.jsx';
 const Details =React.lazy(() => import('./Pages/Details.jsx'));
@@ -39,7 +39,7 @@ export default function App() {
     <BrowserRouter>
     <Navbar />
     <div >
-    <Suspense fallback ={<DisplayLoading />}>
+    <Suspense fallback ={<div className='fallback' style={{minHeight:'100vh'}}>Loading...</div>}>
     <Routes>
       <Route path='/' element ={<LandingPage />}/>
    

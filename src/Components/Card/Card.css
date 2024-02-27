@@ -5,6 +5,11 @@
    transition: all 1s ease-in-out;
     background-position: center;
 }
+.cardContainer{
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 20px;
+}
 .genre{
     display: grid;
     gap: 5px;
@@ -24,9 +29,7 @@
     height: min-content;
     text-wrap: nowrap;
 }
-.cardContainer{
-    
-}
+
 .card_about{
     max-width: 170px;
     display: flex;
@@ -92,4 +95,19 @@ color: antiquewhite;
     }
     .card_image:hover{
         background-size: 120%;  
+    }
+    .play_overlay:hover>.play{
+          animation: scale  .3s ease-in ;
+        
+    }
+    @keyframes scale {
+        0%{
+            opacity: 0;
+            transform: scale(1.2);
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: scale(1);
+            transform: rotate(360deg);
+        }
     }

@@ -33,10 +33,10 @@ export default function Search() {
     <ContentWrapper>
     <div className="searchContainer">
       <div className="marginbox" style={{marginTop:'100px'}}></div>
-      <h1>Search Results for "{param.keywords}"</h1>
+      <h1 id='asd'>Search Results for {param.keywords}</h1>
       <div className="marginbox" style={{marginTop:'60px'}}></div>
       {loading&&<DisplayLoading />}
-      {data?.results?.length==0&&<p>No results Found</p>}
+      {data?.results?.length==0&&(<h1 className='no_result'>No result Found</h1>)}
       <Display data ={mydata} />
     </div>
     </ContentWrapper>

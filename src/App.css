@@ -1,7 +1,20 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
 
+
+.fallback{
+  display: flex;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  font-size: 60px;
+  align-items: center;
+}
+.no_result{
+  color: white;
+  font-size: 60px;
+  font-family: math;
+    font-weight: 100;
+    margin-top: 20px;
+}
+#asd{
+  color: #36e1e1;
+}

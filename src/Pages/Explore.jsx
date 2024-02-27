@@ -41,10 +41,12 @@ export default function Explore() {
 });
 useEffect(() =>{
   if(!data)return;
+  console.log(data);
   const value =data?.results;
   setData(prev => [...prev,...value]);
 },[data]);
 useEffect(() => {
+  
   window.addEventListener("scroll", throttledFn);
   return () => {
     window.removeEventListener("scroll", throttledFn);
@@ -59,7 +61,7 @@ useEffect(() => {
         <ExploreOptions options ={genres} handleClick={handleClick}/>
         <ExploreOptions options ={mediaoptions} handleClick={handleClick}/>
       </div>
-      {data?.results?.length==0&&(<h1>No result Found</h1>)}
+      {data?.results?.length==0&&(<h1 className='no_result'>No result Found</h1>)}
       <Display data ={mydata||data?.results} mediaType={media}/>
       {loading&&<DisplayLoading />}
       </div>
