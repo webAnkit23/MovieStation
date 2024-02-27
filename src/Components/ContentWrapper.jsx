@@ -1,13 +1,9 @@
 import React from 'react'
-
+import './ContentWrapper.css'
 export default function ContentWrapper({children}) {
- const style ={
-    width:'100%',
-    margin: '100px auto',
-    padding : '0px 20px'
- }
+ 
   return (
-    <div className="contentWrapper" style={style}>
+    <div className="contentWrapper" >
      {children}
     </div>
   )

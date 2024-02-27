@@ -1,0 +1,10 @@
+.contentWrapper{
+        width:100%;
+        margin: 100px auto;
+        padding : 0px 20px;
+}
+@media only screen and (max-width:400px){
+    .contentWrapper{
+        padding: 0px;
+    }
+}
