@@ -111,9 +111,12 @@ color: antiquewhite;
             transform: rotate(360deg);
         }
     }
-    @media only screen and (max-width:400px){
+    @media only screen and (max-width:425px){
         .card_image{
             width: 150px;
             height: 230px;
+        }
+        .card_about{
+            width: 150px;
         }
       }

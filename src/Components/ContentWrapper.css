@@ -3,7 +3,7 @@
         margin: 100px auto;
         padding : 0px 20px;
 }
-@media only screen and (max-width:400px){
+@media only screen and (max-width:425px){
     .contentWrapper{
         padding: 0px;
     }
