@@ -4,6 +4,7 @@
    background-size: cover;
    transition: all 1s ease-in-out;
     background-position: center;
+    position: relative;
 }
 .cardContainer{
     justify-self: center;
@@ -66,9 +67,21 @@
     margin: 2px;
     position: absolute;
     right: 0px;
+    bottom: 0px;
+    opacity: 0;
+    transition-duration: .5s;
+   
 }
 .card_div>p{
 color: antiquewhite;
+}
+.card_div>p>span{
+    position: absolute;
+    right: 5px;
+    background: #d11616;
+    bottom: 5px;
+    padding: 2px;
+    border-radius: 5px;
 }
 .play{
     color: red;
@@ -97,7 +110,11 @@ color: antiquewhite;
         background-size: 120%;  
     }
     .play_overlay:hover>.play{
-          animation: scale  .3s ease-in ;
+          animation: scale  .3s ease-in ;  
+    }
+    .card_image:hover>.rating{
+        transform: translateY(-10px);
+    opacity: 1;
         
     }
     @keyframes scale {
@@ -119,4 +136,17 @@ color: antiquewhite;
         .card_about{
             width: 150px;
         }
+        .card_div{
+            width: 100%;
+        }
+        .card_div>h4{
+            text-wrap: nowrap;
+            width: 100%;
+            overflow: hidden;
+        }
+        .play_overlay{
+            width: 150px;
+            height: 230px;
+        }
+        
       }
