@@ -6,9 +6,9 @@ import { RxCross2 } from "react-icons/rx";
 export default function Navbar() {
   const [isOpen ,setOpen] = useState(false);
  const handleClick =() =>{
-  console.log('k');
   setOpen(prev =>!prev);
  }
+ 
   return (
     <>
     <div className={`nav_container ${isOpen?'goUp':'goDown'}` }>
@@ -16,8 +16,8 @@ export default function Navbar() {
              3/9
         </div>
         <ul>
-        <li><Link to='/home' className='link'>Home</Link></li>
-            <li><Link to='/explore' className='link'>Explore</Link></li>
+        <li><Link to='/home' className='link' onClick={handleClick}>Home</Link></li>
+            <li><Link to='/explore' className='link' onClick={handleClick}>Explore</Link></li>
         
         </ul>
         <button>LOGIN</button>

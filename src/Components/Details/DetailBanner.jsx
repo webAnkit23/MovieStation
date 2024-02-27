@@ -5,7 +5,7 @@ import { FaGooglePlay } from "react-icons/fa";
 import MI from '../../assets/MI.jpg';
 import { RxCross2 } from "react-icons/rx";
 import ReactPlayer from 'react-player/lazy';
-export default function DetailBanner({data,videos}) {
+export default function DetailBanner({data,videos,director}) {
     const {url} = useSelector((state) =>state.homeReducer);
     const date = data&&(data?.first_air_date||data?.release_date).split('-').reverse().join('-');
      const trailer = videos?.results?.filter((item) =>item?.type=='Trailer');
@@ -50,7 +50,7 @@ export default function DetailBanner({data,videos}) {
            {data?.createdby?(<div className="createdBy">
                 Creator: {data?.created_by?.map((c,i) =><p key={c.id}>{c.name}{`${i==data.created_by.length-1?'':','}`}</p>)}
             </div>):(<div className='status'>
-                Director : {<>Unknown</>}
+                Director : {<>{director?.length>0?director[0]?.name:'unknown'}</>}
             </div>)}
             <div className="status">Languages : {data?.spoken_languages?.map((c,i) =><p key={i}>{c.english_name}{`${i==data.spoken_languages.length-1?'':'  ,'}`}</p>)}</div>
         </div>

@@ -15,6 +15,9 @@
     top: 0px;
     background-position: center;
 }
+.banner_right{
+    width: 100%;
+}
 .contentWrap{
     padding: 0px 20px;
     margin-top: 100px;

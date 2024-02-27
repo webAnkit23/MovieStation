@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import profilePhoto from '../../assets/profilePhoto.webp'
 import { IoArrowForwardCircleSharp } from "react-icons/io5";
 import { IoArrowBackCircle } from "react-icons/io5";
-export default function Carousal({members,heading}) {
+export default function Carousal({members,heading,loading}) {
     const parent = useRef(null);
     const handleleftClick =() =>{
       parent.current.scrollLeft -= window.innerWidth; 
@@ -13,9 +13,12 @@ export default function Carousal({members,heading}) {
     const handleRightClick =() =>{
       parent.current.scrollLeft += window.innerWidth;
     }
+    if(loading){
+      return (<div>Loading</div>)
+    }
   return (
-      <div className='carousal'>
-        <h3 className='cast'>{heading}</h3>
+     <div className='carousal'>
+       <h3 className='cast'>{heading}</h3>
      <div className="carousalContainer" >
          <IoArrowBackCircle size={30} className='leftArrow arrow'  onClick={handleleftClick}/>
           <div className="carousalBox" ref={parent} >
@@ -25,9 +28,7 @@ export default function Carousal({members,heading}) {
           </div>
           <IoArrowForwardCircleSharp size={30} className='rightArrow arrow' onClick={handleRightClick}/>
      </div>
-    
      </div>
-    
   )
 }
 

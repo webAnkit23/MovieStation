@@ -11,12 +11,13 @@ export default function Landing() {
     if(input.length==0)return;
     navigate(`/search/${input}`) 
   }
-  useEffect(() =>{
-            document.body.style.overflow ='hidden';
-    return () => {
-      document.body.style.overflow ='scroll';
+ useEffect(() =>{
+    if(window.innerWidth<550||window.innerWidth>1800){
+      navigate('/home');
     }
-  },[]);
+    document.body.style.overflow ='hidden';
+    return ()  => document.body.style.overflow ='scroll';
+ },[])
   const handleVisit=()=>{
    
     navigate('/home');
@@ -35,7 +36,7 @@ export default function Landing() {
              <div className="landing_about">
              <h2>Come with me to a journey of  100 years of Cinema</h2>
             <p>This is a great plave to choose a movie that you want to watch today...</p>
-            <p style={{color:'#050405',fontFamily :'cursive'}}>Thousand of movies ...Don't know what to watch.Come to <span>3/9</span> ..we got collections of movies that can help you narrow down your list based on your interaction with us.it contains details of almost all the best movies and TV shows ever been released .Filter it based on rating ,genre and a lot more ...Thank You for visiting this site</p>
+            <p style={{color:'#050405',fontFamily :'cursive'}}>Thousand of movies ...Don't know what to watch.Come to <span style={{color:'white'}}>3/9</span> MovieStation is your go-to destination for discovering and enjoying the latest movie trailers. With a sleek and intuitive React app interface, MovieStation allows users to effortlessly search for their favorite movies, with the added convenience of infinite scrolling for endless browsing. Whether you're looking for the hottest blockbusters or hidden gems, MovieStation has you covered, providing an immersive experience for film enthusiasts of all kinds.</p>
             <p className='train_p'>Hurry up...take the train</p>
              </div>
         </div>
