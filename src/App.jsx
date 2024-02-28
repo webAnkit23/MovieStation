@@ -1,4 +1,4 @@
-import React  from 'react'
+import React, { useRef }  from 'react'
 import LandingPage from './Pages/LandingPage';
 import { Suspense, useEffect } from 'react';
 import { BrowserRouter,Route ,Routes} from 'react-router-dom';
@@ -42,12 +42,10 @@ export default function App() {
     <Suspense fallback ={<div className='fallback' style={{minHeight:'100vh'}}>Loading...</div>}>
     <Routes>
       <Route path='/' element ={<LandingPage />}/>
-   
       <Route path='/explore' element ={<Explore />}/>
       <Route path='/home' element ={<Home />}/>
       <Route path='/details/:mediaType/:id' element ={<Details />}/>
       <Route path='/search/:keywords' element ={<Search/>}/>
-      
     </Routes>
     </Suspense>
     </div>

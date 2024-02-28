@@ -11,13 +11,6 @@ export default function Landing() {
     if(input.length==0)return;
     navigate(`/search/${input}`) 
   }
- useEffect(() =>{
-    if(window.innerWidth<550||window.innerWidth>1800){
-      navigate('/home');
-    }
-    document.body.style.overflow ='hidden';
-    return ()  => document.body.style.overflow ='scroll';
- },[])
   const handleVisit=()=>{
    
     navigate('/home');
@@ -34,10 +27,9 @@ export default function Landing() {
         </form>
              <button className='visit' onClick={handleVisit}>Visit 3/9 <IoIosArrowDroprightCircle  /></button>
              <div className="landing_about">
-             <h2>Come with me to a journey of  100 years of Cinema</h2>
-            <p>This is a great plave to choose a movie that you want to watch today...</p>
-            <p style={{color:'#050405',fontFamily :'cursive'}}>Thousand of movies ...Don't know what to watch.Come to <span style={{color:'white'}}>3/9</span> MovieStation is your go-to destination for discovering and enjoying the latest movie trailers. With a sleek and intuitive React app interface, MovieStation allows users to effortlessly search for their favorite movies, with the added convenience of infinite scrolling for endless browsing. Whether you're looking for the hottest blockbusters or hidden gems, MovieStation has you covered, providing an immersive experience for film enthusiasts of all kinds.</p>
-            <p className='train_p'>Hurry up...take the train</p>
+             <h2>Come with me to a journey of  150 years of Cinema</h2>
+            <p id='train_p'>In the vast landscape of online entertainment, where choices seem limitless,Platform 3/9 emerges as a beacon of liberation for movie enthusiasts. Platform 3/9, the go-to platform for free online movie streaming, has transformed the way we consume cinematic content. Let's delve into the world of 3/9 and explore the unique features that set it apart.</p>
+            <p id='train_p' className='hideP'>Navigating through 3/9 is a breeze, thanks to its user-friendly interface. this website understands the importance of a seamless user experience, allowing viewers to effortlessly search, discover, and indulge in their favorite movies. Whether you're a tech-savvy cinephile or a casual viewer, 3/9 makes the process as smooth as possible.</p>
              </div>
         </div>
     </div>

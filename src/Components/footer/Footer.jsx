@@ -14,7 +14,7 @@ import TopGun from './TopGun.jpeg'
 import './Footer.css'
 export default function Footer() {
   return (
-    <div className="footerContainer">
+    <div className="footerContainer" >
 
             <div className="footerHeading">
                  <h1>Welcome to Platform <span>3/9</span></h1>
