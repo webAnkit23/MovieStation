@@ -12,9 +12,9 @@ export default function Landing() {
     navigate(`/search/${input}`) 
   }
   const handleVisit=()=>{
-   
     navigate('/home');
   }
+  
   return (
     <div className="landing">
         <div className="landing_container">

@@ -114,7 +114,7 @@ color: antiquewhite;
     }
     .card_image:hover>.rating{
         transform: translateY(-10px);
-    opacity: 1;
+      opacity: 1;
         
     }
     @keyframes scale {
