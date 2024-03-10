@@ -4,11 +4,11 @@
     position: relative;
     width: 100%!important;
     overflow: hidden;
-    height: 400px;
+    height: 450px;
     display: flex;
     align-items: normal;
     justify-content: center;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    
 }
 .heroContainer{
     min-height: 200px;
