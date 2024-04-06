@@ -143,6 +143,7 @@ color: antiquewhite;
             text-wrap: nowrap;
             width: 100%;
             overflow: hidden;
+            font-weight: 700;
         }
         .play_overlay{
             width: 150px;

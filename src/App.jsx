@@ -1,5 +1,4 @@
-import React, { useRef }  from 'react'
-import LandingPage from './Pages/LandingPage';
+import React from 'react'
 import { Suspense, useEffect } from 'react';
 import { BrowserRouter,Route ,Routes} from 'react-router-dom';
 import { useDispatch  } from 'react-redux';
@@ -12,6 +11,7 @@ const Details =React.lazy(() => import('./Pages/Details.jsx'));
 const Explore =React.lazy(() => import('./Pages/Explore.jsx'));
 const Search =React.lazy(() => import('./Pages/Search.jsx'));
 const Home =React.lazy(() => import('./Pages/Home.jsx'));
+const Login = React.lazy(() => import('./Pages/LoginPage.jsx'));
 export default function App() {
   const dispatch = useDispatch();
     const fillGenre =(url) =>{
@@ -41,7 +41,7 @@ export default function App() {
     <div >
     <Suspense fallback ={<div className='fallback' style={{minHeight:'100vh'}}>Loading...</div>}>
     <Routes>
-      <Route path='/' element ={<LandingPage />}/>
+      <Route path='/' element ={<Login />}/>
       <Route path='/explore' element ={<Explore />}/>
       <Route path='/home' element ={<Home />}/>
       <Route path='/details/:mediaType/:id' element ={<Details />}/>
