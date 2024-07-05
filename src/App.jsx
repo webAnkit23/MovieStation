@@ -37,9 +37,9 @@ export default function App() {
     },[]);
   return (
     <BrowserRouter>
-    <Navbar />
     <div >
-    <Suspense fallback ={<div className='fallback' style={{minHeight:'100vh'}}>Loading...</div>}>
+    <Suspense fallback ={<div className='fallback' style={{minHeight:'100vh' ,zIndex:10000000}}>Loading...</div>}>
+    <Navbar />
     <Routes>
       <Route path='/' element ={<Login />}/>
       <Route path='/explore' element ={<Explore />}/>

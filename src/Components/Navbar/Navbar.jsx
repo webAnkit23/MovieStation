@@ -13,14 +13,14 @@ export default function Navbar() {
     <>
     <div className={`nav_container ${isOpen?'goUp':'goDown'}` }>
         <div className="nav_icon">
-             3/9
+             platform
         </div>
         <ul>
         <li><Link to='/home' className='link' onClick={handleClick}>Home</Link></li>
             <li><Link to='/explore' className='link' onClick={handleClick}>Explore</Link></li>
         
         </ul>
-        <button>LOGIN</button>
+        <button>3/9</button>
     </div>
       <FaBars size={30} className={`bars nav_opener ${isOpen?'hide':'show'}`} onClick={handleClick}/>
       <RxCross2 size={30} className={`cross nav_opener ${!isOpen?'hide':'show'}`} onClick={handleClick}/>
